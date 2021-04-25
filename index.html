@@ -2,60 +2,117 @@
 <html lang="sp">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Jude moon">
-    <title>Seminario de Visualización - 07MBIG</title>
+  <meta charset="utf-8">
+  <!-- <meta name="author" content="Jude moon"> -->
+  <title>Seminario de Visualización - 07MBIG</title>
 
-    <!-- load d3 and dimple libraries -->
-    <script src="http://d3js.org/d3.v4.min.js"></script>
-    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+  <!-- load d3 and dimple libraries -->
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <!-- <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script> -->
 
-    <!-- add styles to text and graphics -->
-    <style>
-        h1 {
-            background-color: black;
-            color: floralwhite;
-            font-family: Helvetica, sans-serif;
-            width: 100%;
-            height: 80px;
-            text-align: center;
-            padding-top: 30px;
-        }
-        h2 {
-            font-size: 1.4em;
-            text-transform: uppercase;
-            font-family: Helvetica;
-            color: #000;
-            margin-top: 0;
-        }
-        h3 {
-            font-family: Helvetica, sans-serif;
-            text-align: center;
-        }
-        h4 {
-            font-family: Helvetica, sans-serif;
-            text-align: left;
-        }
-        div.text {
-            font-family: Helvetica;
-            padding: 5px;
-            margin: 20px;
-            border-radius: 10px;
-        }
-    </style>
+  <!-- add styles to text and graphics -->
+  <style>
+    h1 {
+      background-color: black;
+      color: floralwhite;
+      font-family: Helvetica, sans-serif;
+      width: 100%;
+      height: 80px;
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      text-transform: uppercase;
+      font-family: Helvetica;
+      color: #000;
+      margin-top: 0;
+    }
+
+    h3 {
+      font-family: Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    h4 {
+      font-family: Helvetica, sans-serif;
+      text-align: left;
+
+      div {
+        font-family: Helvetica;
+        padding: 5px;
+        margin: 20px;
+        border-radius: 10px;
+      }
+
+    }
+
+    div.text {
+      font-family: Helvetica;
+      padding: 5px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 
 <body>
-    <h1 class="main-title">Alquiler de bicicletas</h1>
-    <h4 class="main-autor">Nombre: Roberto Alcántara Escribano</h3>
+  <h1 class="main-title">Alquiler de bicicletas</h1>
+  <h4 class="main-autor">Nombre: Roberto Alcántara Escribano</h3>
     <h4 class="main-url">Url: <a href="https://js-lxxeuz.stackblitz.io">https://js-lxxeuz.stackblitz.io</a></h3>
-    <h4 class="main-fuente">Fuente: <a href="https://drive.google.com/file/d/1bGKU-QweeoRLffGu_yrvRa-AeDm_Jjts/view?usp=sharing">https://drive.google.com/file/d/1bGKU-QweeoRLffGu_yrvRa-AeDm_Jjts/view?usp=sharing</a></h3>
-    <h4 class="main-fecha">Fecha: 27/04/2021</h4>
-    <br>
-    <br>
+      <h4 class="main-fuente">Fuente: </h4>
+      <div>Utilizaremos un dataset que recoge información sobre el alquiler de bicicletas durante el período de dos
+        años, 2011 y 2012. Incluye información sobre las condiciones meteorológicas de cada día para conocer su impacto
+        en la cantidad de alquileres registrados. </div>
+      <h4 class="main-fuente">
+        <a
+          href="https://drive.google.com/file/d/1bGKU-QweeoRLffGu_yrvRa-AeDm_Jjts/view?usp=sharing">https://drive.google.com/file/d/1bGKU-QweeoRLffGu_yrvRa-AeDm_Jjts/view?usp=sharing</a>
+        </h3>
+        <h4 class="main-fecha">Fecha: 27/04/2021</h4>
+        <br>
 
-    <!-- add intro text to the page body -->
-    <div class="summary">
+        <h4>¿Qué influencia tienen las buenas condiciones climatológicas en el alquiler de bicicletas?</h4>
+        <div>
+          Las condiciones climatológicas son un factor importante a la hora de realizar actividades al aire libre, por
+          eso, este documento se centrará en demostrar si esta afirmación es correcta atendiendo a la temperatura, a la
+          humedad y a la velocidad del viento.
+          <br>
+          En consecuencia, las estaciones del año con mejores condiciones climáticas, ofrecerán niveles superiores en el alquiler de bicicletas.
+        </div>
+
+        <h4>Audiencia:</h4>
+        <div>El contenido está dirigido al público en general, a los posibles usuarios del servicio de alquiler de
+          bicicletas. No se requiere un conocimiento específico sobre el tema.</div>
+
+        <h4>Objetivos:</h4>
+
+        <ul>
+
+          <li type="disc">Objetivos propios: Este documento corresponde al trabajo del seminario de la asignatura de
+            Visualización de Datos; el objetivo principal será la utilización de gráficos diversos, interactivos y
+            adecuados para cada idea a representar, así como la elección correcta de todas sus características para
+            obtener visuaizaciones de calidad. <br> Utilizaremos diferentes herramientas de visualización, aprovechando las ventajas de cada una de ellas.
+          </li>
+
+          <br>
+
+          <li type="disc">Objetivos de la audiencia: Comprobar, a partir de los datos ofrecidos, el impacto de las
+            condiciones meteorológicas al realizar actividades al aire libre, concretamente el alquiler de bicicletas
+            para cualquier fin. </li>
+
+        </ul>
+
+        <h4>Mensaje:</h4>
+        <div>Las actividades al aire libre son más atractivas cuando el tiempo acompaña. Por este motivo, cuando la
+          temperatura y otras condiciones meteorológicas son agradables, el consumo de bicicletas alquiladas aumenta.
+          Son un medio de transporte cómodo, permite realizar ejercicio y disfrutar al aire libre. Comprobaremos a
+          partir de los datos si estas afirmaciones son correctas y trataremos de demostrar las conclusiones finales
+          utilizando las visualizaciones incluidas. </div>
+
+
+        <!-- add intro text to the page body -->
+        <!-- <div class="summary">
         <h2 class="text-title">Resumen</h2>
         <div class="text">
 El objetivo de este proyecto es crear visualizaciones efectivas del conjunto de datos Titanic que contiene una muestra de 1309 pasajeros pasajeros con datos como la clase del pasaje, sexo, edad, si sobrevió o no (0: falleció y 1: sobrevivió) entre otros.
@@ -74,12 +131,12 @@ La historia que me gustaría transmitir es que las mujeres y el nivel socioecon�
             </br>
             </br>
         </div>
-    </div>
+    </div> -->
 
-    <!-- add data visualization -->
-    <div class="plot">
+        <!-- add data visualization -->
+        <!-- <div class="plot"> -->
         <!-- The first bar chart -->
-        <h2 class="plot-title">Hombres y mujeres del pasaje</h2>
+        <!-- <h2 class="plot-title">Hombres y mujeres del pasaje</h2>
         <div class="text">
           Uso el tipo de gráfico circular o de tarta para representar las proporciones entre mujeres/hombres y cada una de las 3 categorias. Este tipo de gráfico es adecuado en este caso para representar proporciones en las que no es importante la precisión. Tambien podría haber utilizado gráficos de barras. <br>
           Se han utilizado la herramienta tableau online para los gráficos de barras y circulares.
@@ -109,10 +166,10 @@ La historia que me gustaría transmitir es que las mujeres y el nivel socioecon�
         
         
         </br>
-        </br>
+        </br> -->
 
         <!-- The second bar chart -->
-        <h2 class="plot-title">Supervivientes</h2>
+        <!-- <h2 class="plot-title">Supervivientes</h2>
         <div id="plotContainer4">
           <div class="text">
               Finalmente tratamos de representar en un mismo gráfico el cruce de las dos variables cualitativas(sexo y pasaje) que nos interesa analizar sobre la varialible cantidad de supervivientes o fallecidos(variable cuantitativa). 
@@ -123,13 +180,13 @@ La historia que me gustaría transmitir es que las mujeres y el nivel socioecon�
  
  <a href="https://imgbb.com/"><img src="https://i.ibb.co/L1DZRsp/screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-32-07.png" alt="screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-32-07" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
 <br>
-<a href="https://ibb.co/Dt23NTN"><img src="https://i.ibb.co/CzGxqDq/Titanic3.png" alt="Titanic3" border="0"></a>
+<a href="https://ibb.co/Dt23NTN"><img src="https://i.ibb.co/CzGxqDq/Titanic3.png" alt="Titanic3" border="0"></a> -->
 
 
 
-        </div>
-<!-- add outro text to the page body -->
-    <div class="Interpretation">
+        <!-- </div> -->
+        <!-- add outro text to the page body -->
+        <!-- <div class="Interpretation">
         <h2 class="text-title">Interpretation</h2>
         <div class="text">
             <p>Teniendo en cuenta que las mujeres eran del 35%(466/1309) y las mujeres de 1ª y 2ª clase representan solo el 24%( (139+94)/1309) del tamaño total de la muestra, se evidencia que las personas que se pusieron en botes salvavidas no se tomaron al azar, sino de forma selectiva. La visualización de gráficos cirulares combinados muestra que las características de ser mujer y pertenecer a las clases más altas(1ª y 2ª) eran las principales prioridades para colocarse en botes salvavidas.</p>
@@ -144,8 +201,9 @@ La historia que me gustaría transmitir es que las mujeres y el nivel socioecon�
         </br>
         </br>
         </br>
-    </div>
+    </div> -->
 
-    
+
 </body>
+
 </html>
