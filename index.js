@@ -5,117 +5,18 @@ import "./style.css";
 // const appDiv = document.getElementById('app');
 // appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-var data3 = [
-  { year: 1991, name: "alpha", value: 15 },
-  { year: 1992, name: "alpha", value: 34 },
-  { year: 1991, name: "alpha2", value: 17 },
-  { year: 1992, name: "alpha2", value: 65 },
-  { year: 1991, name: "beta", value: 10 },
-  { year: 1992, name: "beta", value: 10 },
-  { year: 1991, name: "beta2", value: 40 },
-  { year: 1992, name: "beta2", value: 38 },
-  { year: 1991, name: "gamma", value: 5 },
-  { year: 1992, name: "gamma", value: 10 },
-  { year: 1991, name: "gamma2", value: 20 },
-  { year: 1992, name: "gamma2", value: 34 },
-  { year: 1991, name: "delta", value: 50 },
-  { year: 1992, name: "delta", value: 43 },
-  { year: 1991, name: "delta2", value: 17 },
-  { year: 1992, name: "delta2", value: 35 }
-];
-
-var visualization = d3plus
-  .viz()
-  .container("#viz3")
-  .data(data3)
-  .type("box")
-  .id("name")
-  .x("year")
-  .y("value")
-  .draw();
-
-// var visualization = d3plus
-// .viz()
-// .container("#viz")
-// .data(data)
-// .type("box")
-// .id("Card_Category")
-// .x("Dependent_Count")
-// .y("Customer_Age")
-// .draw();
-
-var data2 = [
-  { year: 1991, name: "alpha", value: 15 },
-  { year: 1991, name: "beta", value: 10 },
-  { year: 1991, name: "gamma", value: 5 },
-  { year: 1991, name: "delta", value: 50 },
-  { year: 1992, name: "alpha", value: 20 },
-  { year: 1992, name: "beta", value: 10 },
-  { year: 1992, name: "gamma", value: 10 },
-  { year: 1992, name: "delta", value: 43 },
-  { year: 1993, name: "alpha", value: 30 },
-  { year: 1993, name: "beta", value: 40 },
-  { year: 1993, name: "gamma", value: 20 },
-  { year: 1993, name: "delta", value: 17 },
-  { year: 1994, name: "alpha", value: 60 },
-  { year: 1994, name: "beta", value: 60 },
-  { year: 1994, name: "gamma", value: 25 },
-  { year: 1994, name: "delta", value: 32 }
-];
+//No ha sido posible mostrar - No Data Available - Setting "data" method
 var visualization = d3plus
   .viz()
   .container("#viz2")
-  .data(data5)
+  .data(data)
   .type("bar")
   .id("dependentcount")
   .x("cardcategory")
   .y("customerage")
   .draw();
 
-var data2 = [
-  { year: 1991, name: "alpha", value: 15 },
-  { year: 1991, name: "beta", value: 10 },
-  { year: 1991, name: "gamma", value: 5 },
-  { year: 1991, name: "delta", value: 50 },
-  { year: 1992, name: "alpha", value: 20 },
-  { year: 1992, name: "beta", value: 10 },
-  { year: 1992, name: "gamma", value: 10 },
-  { year: 1992, name: "delta", value: 43 },
-  { year: 1993, name: "alpha", value: 30 },
-  { year: 1993, name: "beta", value: 40 },
-  { year: 1993, name: "gamma", value: 20 },
-  { year: 1993, name: "delta", value: 17 },
-  { year: 1994, name: "alpha", value: 60 },
-  { year: 1994, name: "beta", value: 60 },
-  { year: 1994, name: "gamma", value: 25 },
-  { year: 1994, name: "delta", value: 32 }
-];
-
-var data5 = [
-  { customerage: 51, dependentcount: 4, cardcategory: "Gold" },
-  { customerage: 32, dependentcount: 0, cardcategory: "Silver" },
-  { customerage: 42, dependentcount: 4, cardcategory: "Gold" },
-  { customerage: 50, dependentcount: 1, cardcategory: "Silver" },
-  { customerage: 48, dependentcount: 2, cardcategory: "Silver" },
-  { customerage: 51, dependentcount: 4, cardcategory: "Silver" },
-  { customerage: 41, dependentcount: 3, cardcategory: "Silver" },
-  { customerage: 55, dependentcount: 2, cardcategory: "Silver" },
-  { customerage: 50, dependentcount: 1, cardcategory: "Silver" },
-  { customerage: 50, dependentcount: 1, cardcategory: "Silver" },
-  { customerage: 44, dependentcount: 2, cardcategory: "Silver" },
-  { customerage: 50, dependentcount: 2, cardcategory: "Silver" },
-  { customerage: 57, dependentcount: 2, cardcategory: "Silver" },
-  { customerage: 47, dependentcount: 4, cardcategory: "Silver" },
-  { customerage: 47, dependentcount: 2, cardcategory: "Silver" },
-  { customerage: 43, dependentcount: 1, cardcategory: "Silver" },
-  { customerage: 59, dependentcount: 0, cardcategory: "Silver" },
-  { customerage: 44, dependentcount: 3, cardcategory: "Silver" },
-  { customerage: 47, dependentcount: 2, cardcategory: "Silver" },
-  { customerage: 43, dependentcount: 1, cardcategory: "Silver" },
-  { customerage: 50, dependentcount: 0, cardcategory: "Silver" },
-  { customerage: 48, dependentcount: 4, cardcategory: "Gold" }
-];
-var data10 = [
+var data = [
   { customerage: 51, dependentcount: 4, cardcategory: "Gold" },
   { customerage: 32, dependentcount: 0, cardcategory: "Silver" },
   { customerage: 42, dependentcount: 4, cardcategory: "Gold" },
