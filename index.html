@@ -6,11 +6,12 @@
   <!-- <meta name="author" content="Jude moon"> -->
   <title>Seminario de Visualización - 07MBIG</title>
 
-  <!-- load d3 and dimple libraries -->
-  <script src="http://d3js.org/d3.v4.min.js"></script>
-  <!-- <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script> -->
+  <meta charset="UTF-8">
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3plus/1.9.2/d3plus.full.min.js"></script>
 
-  <!-- add styles to text and graphics -->
+
+
   <style>
     h1 {
       background-color: black;
@@ -65,7 +66,8 @@
       <div>Utilizaremos un dataset que recoge información sobre las cuentas bancarias de diferentes clientes. No incluye
         información sensible, pero aporta datos sobre las situaciones personales de cada cliente (estado civil, edad,
         número de hijos, ingresos anuales, etc). Incluye también información sobre la propia cuenta bancaria dentro de
-        la entidad. </div>
+        la entidad. <br> Para obtener algunos gráficos hemos realizado un preprocesado previo que facilitase el desarrollo.
+      </div>
       <h4 class="main-fuente">
         <a
           href="https://drive.google.com/file/d/1yyomxSLc9PeTe0X59l1Gz6U0vRZRbIW1/view?usp=sharing">https://drive.google.com/file/d/1yyomxSLc9PeTe0X59l1Gz6U0vRZRbIW1/view?usp=sharing</a>
@@ -125,19 +127,31 @@
           privilegios de los grupos de clientes en nuestra muestra particular se ordena en "Platinum", "Gold", "Silver";
           "Blue", siendo "Platinum" la categoría con mayores privilegios.</div>
 
+
+
+
         <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
           src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIvgI9rMHIHo6BEt22rt5z5CfIfoJCf2SWE0VAzE8f1emvF6S2rU2_q3XDvwhJCtinhMoVgxVr0JKs/pubchart?oid=615294582&amp;format=interactive"></iframe>
 
-        <div>Este gráfico de columnas creado con las herramientas de visualización de las hojas de cálculo de Google
-          muestra como la mayoría de los clientes pertenecen a la categoría con menos privilegios, reduciendo el número
-          de ellos que se encuentran en cada categoria según aumentamos la exclusividad del grupo. </div>
         <br>
 
-        <h4>Tipos de clientes - Por Antigüedad</h4>
-        <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script>
+        <div>Este gráfico de columnas creado con las herramientas de visualización de las hojas de cálculo de Google
+          muestra como la mayoría de los clientes pertenecen a la categoría con menos privilegios "Blue", reduciendo el
+          número
+          de ellos que se encuentran en cada categoria según aumentamos la exclusividad del grupo. <br> Para mejorar la calidad de los gráficos posteriores, en las visualizaciones sucesivas no incluiremos esta categoría, pues la cantidad elevada de elementos provoca que existan clientes de este tipo independientemente de las características a las que atendamos.
+        </div>
+        <br>
+
+        <h4>Tipos de clientes - Antigüedad</h4>
+        <a
+          href="https://ibb.co/6sc7nbB"><img src="https://i.ibb.co/ThDxvRL/meses-Activos.png" alt="meses-Activos" border="0" /></a>
+
+        <br>
+
+        <!-- <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script>
         <div class='tableauPlaceholder' style='width: 1920px; height: 883px;'>
           <object class='tableauViz' width='1920' height='883' style='display:none;'><param name='host_url' value='https%3A%2F%2Fdub01.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;seminario20202021' /><param name='name' value='Libro2&#47;Hoja2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object>
-        </div>
+        </div> -->
         <br>
 
         <div> Este nuevo gráfico de barras generado con Tableau muestra el valor promedio de los meses que las cuentas
@@ -145,37 +159,100 @@
           por lo tanto, no será un criterio discriminante en la clasificación de clientes. </div>
 
         <br>
-        <h4>Tipos de clientes - Por género e ingresos anuales</h4>
-        <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script>
+        <h4>Tipos de clientes - Género e ingresos anuales</h4>
+        <a
+          href="https://ibb.co/SK0ZkvH"><img src="https://i.ibb.co/cNtsWTR/Ingresos.png" alt="Ingresos" border="0" /></a>
+
+        <br>
+
+        <!-- <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script>
         <div class='tableauPlaceholder' style='width: 1920px; height: 883px;'>
           <object class='tableauViz' width='1920' height='883' style='display:none;'><param name='host_url' value='https%3A%2F%2Fdub01.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;seminario20202021' /><param name='name' value='Libro2&#47;Hoja4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object>
-        </div>
+        </div> -->
 
         <br>
         <div>De este gráfico de burbujas, seleccionando únicamente los valores masculinos, podríamos deducir que cuanto
           menor nivel de ingresos, menos privilegios, es decir, menos probabilidades de pertenecer a los grupos de mayor
-          exclusividad. Sin embargo, si ampliamos el contenido a a los clientes femeninos, podemos observar que la
+          exclusividad. Sin embargo, si ampliamos el contenido a los clientes femeninos, podemos observar que la
           afirmación anterior no es correcta; y que por tanto, el nivel económico tampoco será un factor decisivo en la
-          agrupación por categorias. <br> De esta visualización, es posible decididr que existen pocos valores femeninos en niveles de ingreso anual elevado. Este factor debemos tenerlo en cuenta a lo largo de nuestro estudio.
-          <br> Debemos matizar que en el gráfico no hemos incluido la clase maoritaria para mejorar la interretación de los datos del resto de clases, pues queriamos centrar la atención en el resto de instancias, asumiendo que la clase "Blue" siempre será la más poblada.
+          agrupación por categorias. <br>
+          De esta visualización, es posible decididr que existen pocos valores femeninos en niveles de ingreso anual elevado. Este factor debemos tenerlo en cuenta a lo largo de nuestro estudio.
+          <br> Debemos matizar que en el gráfico no hemos incluido la clase mayoritaria (como hemos comentado previamente) para mejorar la interpretación de los datos del resto de clases, pues queriamos centrar la atención en el resto de instancias, asumiendo que la clase "Blue" siempre será la más poblada.
         </div>
         <br>
 
-        <h4>Tipos de clientes - Por Estado Civil y Nivel de estudios alcanzados</h4>
-        <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script>
+        <h4>Tipos de clientes - Estado Civil y Nivel de estudios alcanzados</h4>
+        <a
+          href="https://ibb.co/nfSgY0J"><img src="https://i.ibb.co/K7H0fGv/Estado-Civil-Educacion.png" alt="Estado-Civil-Educacion" border="0" /></a>
+
+        <br>
+
+        <!-- <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script>
         <div class='tableauPlaceholder' style='width: 1000px; height: 827px;'>
           <object class='tableauViz' width='1000' height='827' style='display:none;'><param name='host_url' value='https%3A%2F%2Fdub01.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;seminario20202021' /><param name='name' value='Libro2&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object>
+        </div> -->
+
+        <br>
+
+        <div>De nuevo, con este dashboard centrándonos en las características de nivel educativo y estado civil, podemos
+          afirmar de nuevo que estas dos características tampoco son indicadores claros del tipo de cliente asignado.
+          Con relación al estado civil, apreciamos que los clientes divorciados no pueden optar al tipo "Platinum", pero
+          la reducida cantidad de clientes tanto con este estado civil como con una cuenta "Platinum", puede ser causa
+          de que ninguno de ellos cumpla ambas características. <br>
+        Al igual que en el gráfico anterior, hemos descartado el grupo mayoritario, consiguiendo centrar la atención de la audiencia en los grupos más reducidos. (Se ha utilizado Tableau para crear este Dashboard).
         </div>
 
         <br>
 
-        <div>De nuevo, con este dashboard centrandonos en las características de nivel educativo y estao civil, podemos
-          afirmar de nuevo que estas dos características tampoco son indicadores claros del tipo de cliente asignado.
-          Con relación al estado civil, apreciamos que los clientes divorciados no pueden optar al tipo "Platinum", pero
-          la reducida cantidad de clientes tanto con este estado civil como con una cuenta "Platinum", puede ser la
-          causa de que ninguno de ellos cumpla ambas características. <br> Al igual que en el gráfico anterior, hemos descartado el grupo mayoritario, consiguiendo centrar la atención de la audiencia en los grupos más reducidos. (Se ha utilizado Tableau para crear este Dashboard)
+        <h4>Tipos de clientes - Personas a su cargo</h4>
+        <a
+          href="https://ibb.co/1sgN4rg"><img src="https://i.ibb.co/hX6NTB6/Personas-Dependientes.png" alt="Personas-Dependientes" border="0" /></a>
+
+        <br>
+
+        <!-- <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script>
+        <div class='tableauPlaceholder' style='width: 1920px; height: 883px;'>
+          <object class='tableauViz' width='1920' height='883' style='display:none;'><param name='host_url' value='https%3A%2F%2Fdub01.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;seminario20202021' /><param name='name' value='Libro2&#47;Hoja8' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object>
+        </div> -->
+
+        <br>
+
+        <div>Los gráficos de sectores (Tableau) muestran la distribución de tipos de clientes según el número de
+          personas a su cargo. De nuevo observamos que esta característica no supone un elemento útil para incluir los
+          clientos en un grupo u otro. <br>
+        Podemos observar que los valores extremos incluyen menos camtidad de personas a su cargo; a excepción de los clientes con 5 personas a su cargo, el resto incluye clientes de todos los tipos.
         </div>
 
+        <br>
+
+        <h4>Tipos de clientes - Edad</h4>
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIvgI9rMHIHo6BEt22rt5z5CfIfoJCf2SWE0VAzE8f1emvF6S2rU2_q3XDvwhJCtinhMoVgxVr0JKs/pubchart?oid=1307600451&amp;format=interactive"></iframe>
+
+        <br>
+
+        <br>
+
+        <div>Este ultimo gráfico de líneas realizado con la herramienta de visualización de las hojas de cálculo de
+          Google muestra la cantidad cada tipo de cliente en función de la edad. Observamos, ateniendo a los recuentos
+          recogidos, como las edades comprendidas en el sector central son las que más aparecen. Sin embargo, para los
+          tres tipos de clientes mostrados en la gráfica, se observan distribuciones similares, por lo que tampoco
+          podemos utilizar la edad como característica clasificadora. </div>
+
+        <br>
+        <br>
+
+        <h4>Conclusiones</h4>
+        <div>Con toda la información observada en los gráficos, podemos concluir que la entidad bancaria en cuestión no
+          agrupa los clientes por ninguna de las características anteriores. Utilizando algunas de ellas podríamos
+          elaborar hipótesis simples como hemos indicado en la explicación de cada gráfico, pero si generalizamos con
+          todos los datos de la muestra, descartamos cualquier hipótesis planteada. </div>
+
+        <br>
+        <br>
+
+
+        <!-- <div id="viz"></div> -->
 
 
 </body>
